@@ -1,0 +1,827 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="baidu-site-verification" content="szwmhigUmR" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+		<link rel="icon" href="http://aeed40296926200833d8.b0.upaiyun.com/apicloud/9af657371fab0779d2815fbedfee9c3f.png" type="image/x-icon"/>
+		<title>搜农,让一切更简单</title>
+		<meta name="keywords" content="搜农,sonong,node,app,JS,HTML5,nw.js,ruff,智能硬件，模型前端,项目"/>
+		<meta name="description" content="让想成为码农但又找不到方向的人从这里简单的开始"/>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				height: 100%;
+				left: 0px;
+    top: 0px;
+    z-index: 0;
+
+		       /* background-color: #8f8f94;*/
+		      	
+			/*background: url('http://aeed40296926200833d8.b0.upaiyun.com/apicloud/d58b4669651f833c4e68f6ba87195633.jpg') no-repeat;*/
+
+		background:url('http://aeed40296926200833d8.b0.upaiyun.com/apicloud/765f8413c40fb8d94c20e00febfb1563.jpg');
+		background-size:cover;
+background-repeat:no-repeat;
+		/*background-repeat: no-repeat;*/
+			}
+			#header {
+				/*position: fixed;*/
+				
+				width: 100%;
+				text-align: center;
+			}
+			#header img {
+				/*border-radius: 40px; width: 40px; height: 40px;
+				 border:1px solid #11cd6e; display: block;
+				 margin-left:  10px; float: left;text-align:center;vertical-align:middle;*/
+				position: absolute;
+				left: 15px;
+				top: -8px;
+				bottom: 0;
+				width: 40px;
+				height: 40px;
+				/*border-radius: 40px;
+				border: 1px solid #11cd6e;*/
+				font-size: 20px;
+				text-align: center;
+				line-height: 32px;
+			}
+			#header li {
+				list-style-image: none;
+				list-style-type: none;
+				/*background-color: #1abc9c;*/
+				/*background-color: #1abc9c;*/
+				/*border-right-width: 1px;*/
+				/*border-right-style: solid;
+				 border-right-color: #ffffff;*/
+				float: right;
+			}
+			#header h1 {
+				position: relative;
+				font-size: 16px;
+				height: 40px;
+				line-height: 40px;
+				margin: 0em;
+				color: #ff8903;
+				border-bottom: 1px solid #11cd6e;
+			}
+			#header li a {
+				color: #11cd6e;
+				text-decoration: none;
+				margin: 0px;
+				display: block; /* 作为一个块 */
+				padding-right: 20px; /* 设置块的属性 */
+				padding-left: 20px;
+			}
+			/*#header li a:hover {
+				background-color: #1abc9c;
+			}*/
+			#main {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				margin-left: 1px;
+				margin-right: 1px;
+			}
+			#footer {
+				width: 100%;
+				text-align: center;
+				position: absolute;  bottom: 0; 
+				
+				margin-bottom: 0px;
+				font-size: 16px;
+				height: 30px;
+				line-height: 30px;
+				color: #11cd6e;
+				border-top: 1px solid #11cd6e;
+				height: 26px;
+				 line-height: 25px;
+				/*background-color: #34495e;*/
+			}
+			ul, li {
+				overflow: hidden;
+				list-style: none;
+			}
+			b, strong {
+				font-weight: 700;
+			}
+			pre {
+				overflow: auto;
+			}
+			img {
+				border: 0;
+			}
+			p {
+				margin-top: 0;
+				margin-bottom: 0;
+				font-size: 15px;
+				color: #11cd6e;
+			}
+				p:hover {
+				outline: 0;
+				}
+			a {
+				color: #0062cc;
+				text-decoration: none;
+				background-color: transparent;
+			}
+			a:hover {
+				outline: 0;
+			}
+			textarea {
+				overflow: hidden;
+				resize: none;
+			}
+			button {
+				overflow: visible;
+			}
+			button, select {
+				text-transform: none;
+			}
+			button, input, optgroup, select, textarea {
+				margin: 0;
+				font: inherit;
+				color: inherit;
+			}
+			hr {
+				height: 0;
+				-webkit-box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				box-sizing: content-box;
+			}
+			pre {
+				overflow: auto;
+			}
+			/*9宫格*/
+			.aui-grid-nine {
+			/*	border: 1px solid #11cd6e;*/
+				border-bottom: none;
+				/*background: #ffffff;*/
+				padding-left: 1px;
+			}
+			.aui-grid-nine li {
+				float: left;
+				position: relative;
+				padding: 20px 10px;
+				cursor:pointer;
+				/*border-right: 1px solid #11cd6e;
+				border-bottom: 1px solid #11cd6e;*/
+			}
+			.aui-grid-nine li:nth-last-of-type(1), .aui-grid-nine li:nth-last-of-type(10), .aui-grid-nine li:nth-last-of-type(19), .aui-grid-nine li:nth-last-of-type(28), .aui-grid-nine li:nth-last-of-type(37), .aui-grid-nine li:nth-last-of-type(46), .aui-grid-nine li:nth-last-of-type(55), .aui-grid-nine li:nth-last-of-type(64), .aui-grid-nine li:nth-last-of-type(73) {
+				border-right: 0px;
+			}
+			.aui-grid-nine li .aui-iconfont {
+				font-size: 26px;
+				display: inline-block;
+				text-indent: center;
+				margin-bottom: 5px;
+			}
+			.aui-grid-nine li p {
+				margin-bottom: 0;
+			}
+			.aui-grid-nine li:active {
+				/*background: #f4f4f4;*/
+			}
+			/*栅格类*/
+			.aui-col-xs-1, .aui-col-xs-2, .aui-col-xs-3, .aui-col-xs-4, .aui-col-xs-5, .aui-col-xs-6, .aui-col-xs-7, .aui-col-xs-8, .aui-col-xs-9, .aui-col-xs-10, .aui-col-xs-11, .aui-col-5 {
+				position: relative;
+				float: left;
+			}
+			.aui-col-xs-12 {
+				width: 100%;
+				position: relative;
+			}
+			.aui-col-xs-11 {
+				width: 91.66666667%;
+			}
+			.aui-col-xs-10 {
+				width: 83.33333333%;
+			}
+			.aui-col-xs-9 {
+				width: 75%;
+			}
+			.aui-col-xs-8 {
+				width: 66.66666667%;
+			}
+			.aui-col-xs-7 {
+				width: 58.33333333%;
+			}
+			.aui-col-xs-6 {
+				width: 50%;
+			}
+			.aui-col-xs-5 {
+				width: 41.66666667%;
+			}
+			.aui-col-xs-4 {
+				width: 11.11111111%;
+			}
+			.aui-col-xs-3 {
+				width: 12.5%;
+			}
+			.aui-col-xs-2 {
+				width: 16.66666667%;
+			}
+			.aui-col-xs-1 {
+				width: 8.33333333%;
+			}
+			.aui-col-5 {
+				width: 20%;
+			}
+			/*文字对齐*/
+			.aui-text-left {
+				text-align: left !important;
+			}
+			.aui-text-center {
+				text-align: center !important;
+			}
+			.aui-text-justify {
+				text-align: justify !important;
+			}
+			.aui-text-right {
+				text-align: right !important;
+			}
+			/*自动移动文字*/
+			.aui-ellipsis-1 {
+				padding-right: 15px;
+				display: -webkit-box;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-wrap: break-word;
+				white-space: normal !important;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+			.aui-ellipsis-2 {
+				display: -webkit-box;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-wrap: break-word;
+				white-space: normal !important;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			* {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-user-select: none;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-tap-highlight-color: transparent;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--	<div id="wrap">-->
+		<!--<header class="aui-bar aui-bar-nav aui-bar-primary">
+		<div class="aui-title">
+		码农导航
+		</div>
+		</header>-->
+		<div id="header">
+			<!--<p class="aui-padded-10">
+			码农导航
+			</p>-->
+			<h1>
+			<div class="img">
+				<img src="http://aeed40296926200833d8.b0.upaiyun.com/apicloud/9af657371fab0779d2815fbedfee9c3f.png" tapmode onclick=window.location.href='http://www.sonong.org/'>
+			</div>
+			<ul>
+				<!-- <li> <img src="http://aeed40296926200833d8.b0.upaiyun.com/apicloud/130ea0ee187c66b2bbd6a893880720e1.png"></li>-->
+				<li>
+					<a href="http://www.sonong.org/aboutme">AboutMe</a>
+				</li>
+				<li>
+					<a href="https://github.com/sonong" target="_blank">GitHub</a>
+				</li>
+				<!-- <li><a href="http://www.apicloud.com" target="_blank">APICloud</a></li>-->
+				<!--<li><a href="?m=Home&c=Document#shiyong">AUI下载</a></li>
+				<li><a href="?m=Home&c=Document#AUIFlex">AUI Flex</a></li>-->
+				<!-- <li><a href="http://www.liulangnan.com" target="_blank">作者</a></li> -->
+				<li>
+					<a href="http://www.sonong.org/html/tennis" target="_blank">Tennis</a>
+				</li>
+				<li>
+					<a href="http://www.sonong.org/html/microspeak" target="_blank">Microspeak</a>
+				</li>
+			</ul></h1>
+		</div>
+		<div id="main">
+			<!-- <p class="aui-padded-10">
+			9宫格在大屏手机上效果貌似已经不理想了，顺便弄了个最大为4X4的排列方式。列数为标准4列，行数最大为4行。如果不想显示边框，将aui-grid-sixteen和aui-grid-sixteen li的边框样式去掉即可
+			</p>-->
+			<!--    <div class="aui-content">-->
+			<ul class="aui-grid-nine">
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://iissnan.com/progit/">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						progit
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://css.doyoe.com/">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						css
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://iconfont.cn/')">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						iconfont
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.wampserver.com/en/')">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						wampserver
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://laytpl.layui.com/')">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						laytpl
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://olado.github.io/doT/')">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						doT
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.uapp.me/round/')">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						round
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://weavesilk.com/')">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						weavesilk
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.khanacademy.org/contribute')">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+						khan
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.daqianduan.com/nav')">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						daqianduan
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.materialpalette.com/teal/lime')">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						lime
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://qrohlf.com/trianglify-generator/')">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						generator
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.jstips.co/zh_CN/')">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						jstips
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://c.runoob.com/')">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						runoob
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.auicss.com/')">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						auicss
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.imooc.com/')">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						imooc
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://cnodejs.org/')">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						cnodejs
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.apicloud.com/')">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+						apicloud
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://cli.im/')">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						cli
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://tool.oschina.net/commons?type=3')">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						color
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://hack.fdzh.org/')">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						hack
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://hired.com/')">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						hired
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.farbox.com/')">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						fabox
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.gitblog.cn/')">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						gitblog
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://fontawesome.io/icons/')">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						icons
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.benvista.com/downloads')">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						PhotoZoom
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.freecodecamp.com/')">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+				 		freecodecamp
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.coursera.org/')">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						coursera
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.codecademy.com/')">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						codecademy
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.edx.org/')">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						edx
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.udemy.com/')">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						udemy
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://ocw.mit.edu/index.htm')">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						MIT Open
+						</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.udacity.com/')">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						udacity
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.sioe.cn/yingyong/yanse-rgb-16/')">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						yanse
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://sms.mob.com/#/sms')">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						mob
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.xiaomiwujiecao.com/')">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+					        wujiecao	
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.auicss.com/m/')">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						auicss
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://www.jpush.cn/')">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						jpush
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.meiqia.net.cn/')">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						meiqia
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.rongcloud.cn/')">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						rongcloud
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.oschina.net/')">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						oschina
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://blog.csdn.net/i10630226/article/details/50960774')">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						JSblog
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://brackets.io/')">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						brackets
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://blog.csdn.net/libin_1/article/details/50706030')">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+					       libin	
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.processon.com/')">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+					      processon	
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('https://handsontable.com/')">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						handsontable
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.css88.com/book/css/')">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						CSS88
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://mp.weixin.qq.com/s?__biz=MjM5OTM5OTAyMQ==&mid=405325776&idx=2&sn=ad9bf0f13f04b38d43c9d1c856dcd6c6&scene=23&srcid=0324HOXTIhUtbGeeFoo6cDpS#rd')">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						UI
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://www.maodoo.net/')">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						maodoo
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="openWin('http://linqjs.codeplex.com/')">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						linqis
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="https://www.leancloud.cn/">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						leancloud
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://www.donotpay.co.uk/signup.php">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+					       donotpay	
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://www.tuicool.com/">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						tuicool
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html#imagemogr2-thumbnail-spec">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+						qiniu
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="https://c9.io/">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						cloud9
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://linqjs.codeplex.com/documentation?referringTitle=Home">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						linq
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="https://ruff.io/zh-cn/">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						ruff
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://www.nodejs7.com/">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						nw
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="http://www.moz8.com/">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						moz8
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center" onclick="">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-edit aui-text-primary"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-emoji aui-text-danger"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-favor aui-text-warning"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!--<span class="aui-iconfont aui-icon-phone aui-text-pink"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-taxi aui-text-dark"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!--  <span class="aui-iconfont aui-icon-like aui-text-blue"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-deliver aui-text-danger"></span>-->
+					<p>
+						
+					</p>
+				</li>
+				<li class="aui-col-xs-4 aui-text-center">
+					<!-- <span class="aui-iconfont aui-icon-evaluate aui-text-warning"></span>-->
+					<p>
+						
+					</p>
+				</li>
+			</ul>
+			<!--</div>-->
+		</div>
+		<div id="footer">
+			<p >
+				Copyright © 2015,sonong.org lnc.All Rights Reserved.
+			</p>
+		</div>
+		<!--</div>-->
+	</body>
+	<script type="text/javascript">
+		function openWin(website) {
+			window.open('' + website + '')
+		}
+
+		function openWin01() {
+			window.open("https://www.github.com")
+		}
+
+		function openWin02() {
+			window.open("https://www.baidu.com/")
+		}
+	</script>
+</html>
