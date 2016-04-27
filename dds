@@ -1,0 +1,76 @@
+[33mcommit 9d6d2b2318a2a344044e3581f72e9ad9efbfab5f[m
+Author: sonong <286367359@qq.com>
+Date:   Wed Apr 27 08:31:02 2016 +0800
+
+    Update index.html
+
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 6ae7940..7b75aba 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -669,10 +669,10 @@[m [mbackground-repeat:no-repeat;[m
+ 						moz8[m
+ 					</p>[m
+ 				</li>[m
+[31m-				<li class="aui-col-xs-4 aui-text-center" onclick="">[m
+[32m+[m				[32m<li class="aui-col-xs-4 aui-text-center" onclick="http://www.justinmind.com.cn/">[m
+ 					<!--<span class="aui-iconfont aui-icon-camera aui-text-info"></span>-->[m
+ 					<p>[m
+[31m-						[m
+[32m+[m						[32mjustinmind[m
+ 					</p>[m
+ 				</li>[m
+ 				<li class="aui-col-xs-4 aui-text-center" onclick="">[m
+
+[33mcommit 240bee4ce148669553322651095de9c63fed914d[m
+Author: sonong <286367359@qq.com>
+Date:   Tue Apr 26 17:03:16 2016 +0800
+
+    Update aboutme.html
+
+[1mdiff --git a/html/aboutme.html b/html/aboutme.html[m
+[1mindex 671a6b9..703c08b 100644[m
+[1m--- a/html/aboutme.html[m
+[1m+++ b/html/aboutme.html[m
+[36m@@ -218,12 +218,12 @@[m [mhtml,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,str[m
+ 		<div class="aui-slide-wrap" >[m
+ 			<div class="aui-slide-node aui-slide-node-middle aui-slide-node-center">[m
+ 				<div class="aui-content aui-padded-15">[m
+[31m-					<span class="aui-text-danger">AUI Slide</span>会让你更方便让你布局轮播效果[m
+[32m+[m					[32m<span class="aui-text-danger">搜农</span>让一切更简单[m
+ 				</div>[m
+ 			</div>[m
+ 			<div class="aui-slide-node aui-slide-node-middle aui-slide-node-center">[m
+ 				<div class="aui-content aui-padded-15">[m
+[31m-					<span class="aui-text-success">AUI Slide</span>更好的支持循环滑动切换[m
+[32m+[m					[32m<span class="aui-text-success">JavaScript</span>让世界更美好[m
+ 				</div>[m
+ 			</div>[m
+ 		</div>[m
+[36m@@ -287,4 +287,4 @@[m [mhtml,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,str[m
+ //	})[m
+ //	console.log(slide3.pageCount());[m
+ </script>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m[32m</html>[m
+
+[33mcommit af573c60d62249e9a4bae42fa60384019b9dab40[m
+Author: sonong <286367359@qq.com>
+Date:   Tue Apr 26 16:59:16 2016 +0800
+
+    Update index.html
+
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 2df0ba5..6ae7940 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -292,7 +292,7 @@[m [mbackground-repeat:no-repeat;[m
+ 			<ul>[m
+ 				<!-- <li> <img src="http://aeed40296926200833d8.b0.upaiyun.com/apicloud/130ea0ee187c66b2bbd6a893880720e1.png"></li>-->[m
+ 				<li>[m
+[31m-					<a href="http://www.sonong.org/aboutme">AboutMe</a>[m
+[32m+[m					[32m<a href="http://www.sonong.org/html/aboutme">AboutMe</a>[m
+ 				</li>[m
+ 				<li>[m
+ 					<a href="https://github.com/sonong" target="_blank">GitHub</a>[m
